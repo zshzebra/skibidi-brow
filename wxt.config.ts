@@ -9,7 +9,12 @@ export default defineConfig({
         web_accessible_resources: [
             {
                 matches: ["<all_urls>"],
-                resources: ["skibidi-toilet.gif", "skibidi.mp3", "tele.gif"],
+                resources: [
+                    "skibidi-toilet.gif",
+                    "skibidi.mp3",
+                    "skibidi_big.wav",
+                    "tele.gif",
+                ],
             },
         ],
     },

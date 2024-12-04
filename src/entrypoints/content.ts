@@ -1,7 +1,7 @@
 import imageUrl from "/skibidi-toilet.gif";
 import teleUrl from "/tele.gif";
 import soundUrl from "/skibidi.mp3";
-import loudUrl from /skibidi_big.mp3";
+import loudUrl from "/skibidi_big.wav";
 
 export default defineContentScript({
     matches: ["<all_urls>"],
