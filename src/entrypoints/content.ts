@@ -22,8 +22,10 @@ export default defineContentScript({
 
         setTimeout(() => {
             var audio = new Audio(browser.runtime.getURL(soundUrl));
+            audio.volume = 0.5; // Only applies to normal audio file, as loud one reassigns the audio, thus back to 100%
             if (Math.random() >= 0.9)
                 audio = new Audio(browser.runtime.getURL(loudUrl));
+
             audio.loop = true;
             audio.autoplay = true;
             document.body.appendChild(audio);
