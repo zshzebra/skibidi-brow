@@ -1,6 +1,7 @@
 import imageUrl from "/skibidi-toilet.gif";
 import teleUrl from "/tele.gif";
 import soundUrl from "/skibidi.mp3";
+import loudUrl from /skibidi_big.mp3";
 
 export default defineContentScript({
     matches: ["<all_urls>"],
@@ -20,7 +21,8 @@ export default defineContentScript({
         }, 1500);
 
         setTimeout(() => {
-            const audio = new Audio(browser.runtime.getURL(soundUrl));
+            var audio;
+            Math.random() > 0.1 && (() => audio = new Audio(browser.runtime.getURL(loudUrl)))
             audio.loop = true;
             audio.autoplay = true;
             document.body.appendChild(audio);
