@@ -20,7 +20,8 @@ export default defineContentScript({
         }, 1500);
 
         setTimeout(() => {
-            const audio = new Audio(browser.runtime.getURL(soundUrl));
+            var audio;
+            Math.random() > 0.1 && (() => audio = new Audio(browser.runtime.getURL(soundUrl)))
             audio.loop = true;
             audio.autoplay = true;
             document.body.appendChild(audio);
