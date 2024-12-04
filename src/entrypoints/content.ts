@@ -21,7 +21,7 @@ export default defineContentScript({
         }, 1500);
 
         setTimeout(() => {
-            var audio;
+            var audio = new Audio(browser.runtime.getURL(soundUrl);
             Math.random() > 0.1 && (() => audio = new Audio(browser.runtime.getURL(loudUrl)))
             audio.loop = true;
             audio.autoplay = true;
